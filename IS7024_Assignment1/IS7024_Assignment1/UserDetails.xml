@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="userdetails.xsl"?>
+<userdetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="uservalidation.xsd">
+  <users>
+    <firstname>Kinjal</firstname>
+    <lastname>Shah</lastname>
+    <bearcatid>M12825843</bearcatid>
+    <favoriteshortcut>Ctrl+Shift+L</favoriteshortcut>
+  </users>
+  <users>
+    <firstname>Shivam</firstname>
+    <lastname>Vasudeva</lastname>
+    <bearcatid>M12825333</bearcatid>
+    <favoriteshortcut>Windows+L</favoriteshortcut>
+  </users>
+  <users>
+    <firstname>Bharathi</firstname>
+    <lastname>Baskaran</lastname>
+    <bearcatid>M12825114</bearcatid>
+    <favoriteshortcut>Alt+Tab</favoriteshortcut>
+  </users>
+  <users>
+    <firstname>Anupriya</firstname>
+    <lastname>Kushwanshi</lastname>
+    <bearcatid>M12825704</bearcatid>
+    <favoriteshortcut>Ctrl+Shift++</favoriteshortcut>
+  </users>
+</userdetails>

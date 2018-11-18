@@ -1,0 +1,30 @@
+﻿body {
+    background-color: lavender;
+}
+
+#topnav {
+    background-color:mediumvioletred;
+    margin-top: 0px;
+    position: fixed;
+    vertical-align: top;
+    left: 0;
+    top: 0;
+    height: 5em;
+    width: 100%;
+    z-index: 100;
+}
+
+#content {
+    position: relative;
+    margin-top: 5em;
+}
+
+#aboutus ul li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+em {
+    font-style: italic;
+    color:rebeccapurple;
+    font-size:large
+}
