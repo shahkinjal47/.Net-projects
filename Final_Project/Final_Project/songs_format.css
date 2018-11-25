@@ -1,0 +1,47 @@
+﻿body {
+    background-image: url(images/secheadset.jpg);
+    background-repeat: no-repeat;
+    height: auto; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+
+#topnav {
+    background-color: antiquewhite;
+    margin-top: 0px;
+    position: fixed;
+    vertical-align: top;
+    left: 0;
+    top: 0;
+    height: 7em;
+    width: 100%;
+    z-index: 100;
+}
+
+#content {
+    color: black;
+    text-decoration-color: chartreuse;
+    font-size: 20px;
+    position: relative;
+    margin-top: 7em;
+    top: 0px;
+    left: 0px;
+    height: 436px;
+    width: 1307px;
+}
+
+#aboutus ul li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+em {
+    font-style: italic;
+    color: rebeccapurple;
+    font-size: large
+}
+
+.right {
+    text-align: right;
+    vertical-align: bottom;
+}
