@@ -4,8 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">    
-    <link rel="stylesheet" href="songs_format.css" type="text/css" />    
-    <title>songs Collection</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />    
+    <title>Songs Collection</title>
 </head>
 <body>
     <form id="songs_id" runat="server">
@@ -19,21 +19,18 @@
                     <td width="300">
                     </td>
                     <td style="float: right;">
-                        <img src="images/bg.jpg" alt="Song image" height="108" width="380" />
+                        <img src="images/songs artists.jpg" alt="Song image" height="108" width="380" />
                     </td>
                 </tr>
             </table>
         </div>
         <div id="content">
-            Please Enter a Song to search:<br />
             <br />
-            <br />
-            <asp:Label ID="Songlabel" runat="server" Text="Enter Song:"></asp:Label>
+            <asp:Label ID="Songlabel" runat="server" Text="Search Song:"></asp:Label>
 &nbsp;
-            <asp:TextBox ID="songtext" label="enter song name" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            <asp:Button ID="songbutton" runat="server" OnClick="songbutton_Click" Text="Submit-- yaya!!!" />
+            <asp:TextBox ID="songtext" label="enter song name" runat="server" placeholder="Song Name" ></asp:TextBox>
+
+            <asp:Button ID="songbutton" runat="server" OnClick="songbutton_Click" Text="Submit" />
             <br />
             <br />
             <asp:Label ID="song_info" runat="server" label="[song_info]"></asp:Label>

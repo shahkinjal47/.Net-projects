@@ -28,7 +28,7 @@
         <div id="content">
             <p>
                 <br />
-                Search Movie : <input id="Searchbox" type="text" placeholder="Movie Name" runat="server"/>
+                Search Movie: <input id="Searchbox" type="text" placeholder="Movie Name" runat="server"/>
                 <asp:Button ID="submit_button" runat="server" Text="Submit" OnClick="SubBtnClick" />
                 <br /> <br />
                 <asp:Label ID="Movie_info" runat="server" Text=""></asp:Label>                

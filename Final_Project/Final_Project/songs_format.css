@@ -9,8 +9,8 @@
 }
 
 #topnav {
-    /*background-color: antiquewhite;*/
     background-color: mediumslateblue;
+    margin-top: 0px;
     position: fixed;
     vertical-align: top;
     left: 0;
@@ -32,6 +32,7 @@
     height: 436px;
     width: 1307px;
 }
+
 
 #aboutus ul li {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
