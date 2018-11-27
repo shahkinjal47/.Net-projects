@@ -33,3 +33,7 @@ em {
     text-align: right;
     vertical-align: bottom;
 }
+
+td {
+    float: right;
+}

@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainPage.aspx.cs" Inherits="Final_Project.MainPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MovieSearch.aspx.cs" Inherits="Final_Project.MainPage" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel="stylesheet" href="/Content/styles.css" type="text/css" />
     <title>Movie Info</title>
 </head>
 <body>

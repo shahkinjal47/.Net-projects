@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Song_Search.aspx.cs" Inherits="Final_Project.sample" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Song_Search.aspx.cs" Inherits="Final_Project.SongSearch" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">    
-    <link rel="stylesheet" href="styles.css" type="text/css" />    
+    <link rel="stylesheet" href="/Content/styles.css" type="text/css" />    
     <title>Songs Collection</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
                     </td>
                     <td width="300">
                     </td>
-                    <td style="float: right;">
+                    <td>
                         <img src="images/songs artists.jpg" alt="Song image" height="108" width="380" />
                     </td>
                 </tr>
@@ -30,7 +30,7 @@
 &nbsp;
             <asp:TextBox ID="songtext" label="enter song name" runat="server" placeholder="Song Name" ></asp:TextBox>
 
-            <asp:Button ID="songbutton" runat="server" OnClick="songbutton_Click" Text="Submit" />
+            <asp:Button ID="songbutton" runat="server" OnClick="Songbutton_Click" Text="Submit" />
             <br />
             <br />
             <asp:Label ID="song_info" runat="server" label="[song_info]"></asp:Label>

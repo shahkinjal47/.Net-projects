@@ -13,7 +13,7 @@ namespace Final_Project
         private string poster_path;
         private string release_date;
         private string revenue;
-        private string popularity;
+        private readonly string popularity;
         
 
         public string Title { get => title; set => title = value; }

@@ -21,9 +21,9 @@ namespace Final_Project
             Search_Movie();
         }
 
-        public void Search_Movie()
+        private void Search_Movie()
         {
-            Movie_info.Text = "";
+            //Movie_info.Text = "";
             string search_text = Searchbox.Value;
             string url = "https://api.themoviedb.org/3/search/movie?api_key=ca0f17e030221db0ccc79d1241d7d943&language=en-US&query=" + search_text + "&page=1&include_adult=false";
             //Uri uri = new Uri(@"https://api.themoviedb.org/3/search/movie?api_key=ca0f17e030221db0ccc79d1241d7d943&language=en-US&query=hangover&page=1&include_adult=false");
@@ -34,10 +34,10 @@ namespace Final_Project
             String responseData = streamReader.ReadToEnd();
             
 
-            ResultsCollection result_Collection = JsonConvert.DeserializeObject<ResultsCollection>(responseData);
-            int Result_count = result_Collection.Results.Count;
+            ResultsCollection resultCollection = JsonConvert.DeserializeObject<ResultsCollection>(responseData);
+            int resultCount = resultCollection.Results.Count;
 
-            if(Result_count < 1)
+            if(resultCount < 1)
             {
                 Movie_info.Text = "<p>No search results found for <strong>" + search_text +
                     "</strong>. This movie seems to be not so famous. Time to improve your taste perhaps <img src=\"images/smiley.jpg\" alt=\":P\" height=\"20\" width=\"20\" /> </p>";
@@ -45,7 +45,7 @@ namespace Final_Project
             else
             {
                 int i = 1;   
-                foreach (var resultObj in result_Collection.Results)
+                foreach (var resultObj in resultCollection.Results)
                 {
                     
                     Movie_info.Text += i + ". " + "<strong> Movie Title: " + resultObj.Title 

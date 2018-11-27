@@ -10,13 +10,15 @@ using System.Web.UI.WebControls;
 
 namespace Final_Project
 {
-    public partial class sample : System.Web.UI.Page
+    public partial class SongSearch : System.Web.UI.Page
     {
+       
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        protected void songbutton_Click(object sender, EventArgs e)
+        protected void Songbutton_Click(object sender, EventArgs e)
         {
 
             string search_text = songtext.Text;
@@ -28,30 +30,30 @@ namespace Final_Project
             }
         }
 
-        public void Search_songs()
+        private void Search_songs()
         {
-            song_info.Text = "";
-            string search_text = songtext.Text;
-            string url = "https://itunes.apple.com/search?term=" + search_text;
+            //song_info.Text = "";
+            string searchText = songtext.Text;
+            string url = "https://itunes.apple.com/search?term=" + searchText;
             Uri uri = new Uri(@url);
             WebRequest webRequest = WebRequest.Create(uri);
             WebResponse response = webRequest.GetResponse();
             StreamReader streamReader = new StreamReader(response.GetResponseStream());
             String responseData = streamReader.ReadToEnd();
 
-            Songcollection resultCount = JsonConvert.DeserializeObject<Songcollection>(responseData);
-            int Result_count_song = resultCount.Results.Count;
+            Songcollection resultCollection = JsonConvert.DeserializeObject<Songcollection>(responseData);
+            int ResultCountSong = resultCollection.Results.Count;
 
 
-            if (Result_count_song < 1)
+            if (ResultCountSong < 1)
             {
-                song_info.Text = "<p>No search results found for <strong>" + search_text +
+                song_info.Text = "<p>No search results found for <strong>" + searchText +
                     "</strong>. This song seems to be not so famous. Time to improve your taste perhaps <img src=\"images/smiley.jpg\" alt=\":P\" height=\"20\" width=\"20\" /> </p>";
             }
             else
             {
                 int i = 1;
-                foreach (var data in resultCount.Results)
+                foreach (var data in resultCollection.Results)
                 {
 
                     song_info.Text += i + ". " + "<strong> song info: " + data.Kind

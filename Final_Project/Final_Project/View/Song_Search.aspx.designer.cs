@@ -10,7 +10,7 @@
 namespace Final_Project {
     
     
-    public partial class sample {
+    public partial class SongSearch {
         
         /// <summary>
         /// songs_id control.
