@@ -23,7 +23,7 @@
                     <td width="300">
                     </td>
                     <td style="float: right;">
-                        <img src="images/songs artists.jpg" alt="Song image" height="108" width="380" />
+                        <img src="images/songs artists.jpg" alt="Song image" height="98" width="380" />
                     </td>
                 </tr>
             </table>
@@ -35,6 +35,7 @@
             <asp:TextBox class="form-control" ID="songtext" label="enter song name" runat="server" placeholder="Song Name" ></asp:TextBox>
             <br />
             <asp:Button class="btn btn-primary" ID="songbutton" runat="server" OnClick="songbutton_Click" Text="Submit" />
+            <a href="MainPage.aspx" class="btn btn-primary">Go back to movie search</a>
             <br />
             <br />
             <asp:Label ID="song_info" runat="server" label="[song_info]"></asp:Label>
