@@ -18,18 +18,3 @@
     position: relative;
     margin-top: 7em;
 }
-
-#aboutus ul li {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-em {
-    font-style: italic;
-    color: rebeccapurple;
-    font-size: large
-}
-
-.right {
-    text-align: right;
-    vertical-align: bottom;
-}

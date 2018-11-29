@@ -88,7 +88,7 @@
   <ItemGroup>
     <Content Include="MainPage.aspx" />
     <Content Include="songs_format.css" />
-    <Content Include="Song_Search.aspx" />
+    <Content Include="SongSearch.aspx" />
     <Content Include="Service1.svc" />
     <Content Include="styles.css" />
     <Content Include="Web.config" />
@@ -105,12 +105,12 @@
     <Compile Include="ResultCollection.cs" />
     <Compile Include="Song.cs" />
     <Compile Include="Songcollection.cs" />
-    <Compile Include="Song_Search.aspx.cs">
-      <DependentUpon>Song_Search.aspx</DependentUpon>
+    <Compile Include="SongSearch.aspx.cs">
+      <DependentUpon>SongSearch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Song_Search.aspx.designer.cs">
-      <DependentUpon>Song_Search.aspx</DependentUpon>
+    <Compile Include="SongSearch.aspx.designer.cs">
+      <DependentUpon>SongSearch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>

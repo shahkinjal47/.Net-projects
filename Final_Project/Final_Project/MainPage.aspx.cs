@@ -1,12 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Final_Project
 {
@@ -47,9 +42,8 @@ namespace Final_Project
                 int i = 1;   
                 foreach (var resultObj in result_Collection.Results)
                 {
-                    
-                    Movie_info.Text += i + ". " + "<strong> Movie Title: " + resultObj.Title 
-                        + " <br/>Release Date: </strong>" + resultObj.Release_Date + " <br/><strong>Overview: </strong>" + resultObj.Overview + "<br/><strong>Votes: </strong>" 
+                    Movie_info.Text += i + ". " + "<strong> Movie Title: " + resultObj.Title
+                        + " <br/>Release Date: </strong>" + resultObj.Release_Date + " <br/><strong>Overview: </strong>" + resultObj.Overview + "<br/><strong>Votes: </strong>"
                         + resultObj.Vote_average + "<br/>";
                     i++;
                 }
