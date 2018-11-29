@@ -16,6 +16,7 @@ namespace Final_Project
         {
 
         }
+
         protected void SubBtnClick(object sender, EventArgs e)
         {
             Search_Movie();
@@ -26,13 +27,11 @@ namespace Final_Project
             Movie_info.Text = "";
             string search_text = Searchbox.Value;
             string url = "https://api.themoviedb.org/3/search/movie?api_key=ca0f17e030221db0ccc79d1241d7d943&language=en-US&query=" + search_text + "&page=1&include_adult=false";
-            //Uri uri = new Uri(@"https://api.themoviedb.org/3/search/movie?api_key=ca0f17e030221db0ccc79d1241d7d943&language=en-US&query=hangover&page=1&include_adult=false");
             Uri uri = new Uri(@url);
             WebRequest webRequest = WebRequest.Create(uri);
             WebResponse response = webRequest.GetResponse();
             StreamReader streamReader = new StreamReader(response.GetResponseStream());
             String responseData = streamReader.ReadToEnd();
-            
 
             ResultsCollection result_Collection = JsonConvert.DeserializeObject<ResultsCollection>(responseData);
             int Result_count = result_Collection.Results.Count;
@@ -53,9 +52,7 @@ namespace Final_Project
                         + resultObj.Vote_average + "<br/>";
                     i++;
                 }
-                
             }
-            
         }
     }
 }

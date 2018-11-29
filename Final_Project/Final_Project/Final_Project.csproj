@@ -87,7 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MainPage.aspx" />
-    <Content Include="songs_format.css" />
     <Content Include="Song_Search.aspx" />
     <Content Include="Service1.svc" />
     <Content Include="styles.css" />

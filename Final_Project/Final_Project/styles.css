@@ -1,35 +1,40 @@
-﻿body {
-    background-color:aliceblue;
+﻿img {
+    height: 79.6px;
+    width: 300px;
+    position: absolute;
+    top: 0px;
+    right: 16px;
+    position: fixed;
+    z-index: 100;
 }
 
-#topnav {
-    background-color:mediumslateblue;
-    margin-top: 0px;
-    position: fixed;
-    vertical-align: top;
-    left: 0;
-    top: 0;
-    height: 7em;
+.topnav {
+    background-color: #8A2BE2;
+    margin: 0px;
+    top: 0px;
+    left: 0px;
     width: 100%;
-    z-index: 100;
+    position: fixed;
+    z-index: 50;
+}
+
+.topnav h1 {
+    margin: 5px;
+    color: #F5F5F5;
+}
+
+.topnav em {
+    margin: 10px;
+    color: #FFB6C1;
+    font-style: italic;
+
 }
 
 #content {
     position: relative;
-    margin-top: 7em;
+    top: 80px;
 }
 
 #aboutus ul li {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-em {
-    font-style: italic;
-    color: rebeccapurple;
-    font-size: large
-}
-
-.right {
-    text-align: right;
-    vertical-align: bottom;
 }
