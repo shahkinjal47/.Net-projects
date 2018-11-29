@@ -25,37 +25,44 @@ namespace Final_Project
         {
             Movie_info.Text = "";
             string search_text = Searchbox.Value;
-            string url = "https://api.themoviedb.org/3/search/movie?api_key=ca0f17e030221db0ccc79d1241d7d943&language=en-US&query=" + search_text + "&page=1&include_adult=false";
-            //Uri uri = new Uri(@"https://api.themoviedb.org/3/search/movie?api_key=ca0f17e030221db0ccc79d1241d7d943&language=en-US&query=hangover&page=1&include_adult=false");
-            Uri uri = new Uri(@url);
-            WebRequest webRequest = WebRequest.Create(uri);
-            WebResponse response = webRequest.GetResponse();
-            StreamReader streamReader = new StreamReader(response.GetResponseStream());
-            String responseData = streamReader.ReadToEnd();
-            
 
-            ResultsCollection result_Collection = JsonConvert.DeserializeObject<ResultsCollection>(responseData);
-            int Result_count = result_Collection.Results.Count;
-
-            if(Result_count < 1)
+            //////////////////////////////////////////////////////////////////////////////////////////
+            if (search_text != "")
             {
-                Movie_info.Text = "<p>No search results found for <strong>" + search_text +
-                    "</strong>. This movie seems to be not so famous. Time to improve your taste perhaps <img src=\"images/smiley.jpg\" alt=\":P\" height=\"20\" width=\"20\" /> </p>";
+                string url = "https://api.themoviedb.org/3/search/movie?api_key=ca0f17e030221db0ccc79d1241d7d943&language=en-US&query=" + search_text + "&page=1&include_adult=false";
+                //Uri uri = new Uri(@"https://api.themoviedb.org/3/search/movie?api_key=ca0f17e030221db0ccc79d1241d7d943&language=en-US&query=hangover&page=1&include_adult=false");
+                Uri uri = new Uri(@url);
+                WebRequest webRequest = WebRequest.Create(uri);
+                WebResponse response = webRequest.GetResponse();
+                StreamReader streamReader = new StreamReader(response.GetResponseStream());
+                String responseData = streamReader.ReadToEnd();
+
+
+                ResultsCollection result_Collection = JsonConvert.DeserializeObject<ResultsCollection>(responseData);
+                int result_count = result_Collection.Results.Count;
+
+                if (result_count < 1)
+                {
+                    Movie_info.Text = "<p>No search results found for <strong>" + search_text;
+                }
+                else
+                {
+                    int i = 1;
+                    foreach (var resultObj in result_Collection.Results)
+                    {
+
+                        Movie_info.Text += i + ". " + "<strong> Movie Title: " + resultObj.Title
+                            + " <br/>Release Date: </strong>" + resultObj.Release_Date + " <br/><strong>Overview: </strong>" + resultObj.Overview + "<br/><strong>Votes: </strong>"
+                            + resultObj.Vote_average + "<br/>";
+                        i++;
+                    }
+
+                }
             }
             else
             {
-                int i = 1;   
-                foreach (var resultObj in result_Collection.Results)
-                {
-                    
-                    Movie_info.Text += i + ". " + "<strong> Movie Title: " + resultObj.Title 
-                        + " <br/>Release Date: </strong>" + resultObj.Release_Date + " <br/><strong>Overview: </strong>" + resultObj.Overview + "<br/><strong>Votes: </strong>" 
-                        + resultObj.Vote_average + "<br/>";
-                    i++;
-                }
-                
+                Movie_info.Text = "<p><strong>please enter a movie name </strong></p>";
             }
-            
         }
     }
 }

@@ -20,11 +20,9 @@
                         <h1>Movie Database</h1>
                         <strong>Go ahead and know more about your favourite movies!!</strong>
                     </td>
-                    <td width="300">
-
-                    </td>
+                    <td width="300"></td>
                     <td style="float: right;">
-                        <img src="images/movies.jpg" alt="Movie image" height="98" width="380" />
+                        <img src="images/movies.jpg" alt="Movie image" />
                     </td>
                 </tr>
             </table>
@@ -32,13 +30,15 @@
         <div id="content" class="form-group col-xs-4">
             <p>
                 <br />
-                &nbsp;Search Movie: <input id="Searchbox" class="form-control" type="text" placeholder="Movie Name" runat="server"/>
+                &nbsp;Search Movie:
+                <input id="Searchbox" class="form-control" type="text" placeholder="Movie Name" runat="server" />
                 <br />
-                <asp:Button class="btn btn-primary" ID="submit_button" runat="server" Text="Submit" OnClick="SubBtnClick" />
+                <asp:Button class="btn btn-primary" ID="submit_button" runat="server" Text="Search" OnClick="SubBtnClick" />
                 <a href="Song_Search.aspx" class="btn btn-primary">Go to Song Search Page</a>
-                <br /> <br />
-                <asp:Label ID="Movie_info" runat="server" Text=""></asp:Label>                
-             </p>
+                <br />
+                <br />
+                <asp:Label ID="Movie_info" runat="server" Text=""></asp:Label>
+            </p>
             <br />
         </div>
     </form>

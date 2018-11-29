@@ -1,9 +1,9 @@
 ﻿body {
-    background-color:aliceblue;
+    background-color: aliceblue;
 }
 
 #topnav {
-    background-color:mediumslateblue;
+    background-color: mediumslateblue;
     margin-top: 0px;
     position: fixed;
     vertical-align: top;
@@ -12,6 +12,8 @@
     height: 7em;
     width: 100%;
     z-index: 100;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #content {
@@ -32,4 +34,9 @@ em {
 .right {
     text-align: right;
     vertical-align: bottom;
+}
+
+img {
+    height: 98px;
+    width: 380px;
 }
