@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="styles.css" type="text/css" />  
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
     <title>Songs Collection</title>
 </head>
 <body>
@@ -31,8 +34,8 @@
         <div id="content" class="form-group col-xs-4 ">
             <br />
             &nbsp;<asp:Label ID="Songlabel" runat="server" Text="Search Song:"></asp:Label>
+            <asp:textbox id="songtext" class="form-control" type="text" placeholder="Example: Who says" runat="server"/>
 &nbsp;
-            <asp:TextBox class="form-control" ID="songtext" label="enter song name" runat="server" placeholder="Song Name" ></asp:TextBox>
             <br />
             <asp:Button class="btn btn-primary" ID="songbutton" runat="server" OnClick="songbutton_Click" Text="Submit" />
             <a href="MainPage.aspx" class="btn btn-primary">Go back to movie search</a>

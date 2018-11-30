@@ -86,7 +86,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Autocomplete.aspx" />
     <Content Include="MainPage.aspx" />
+    <Content Include="Songautocomplete.aspx" />
     <Content Include="songs_format.css" />
     <Content Include="Song_Search.aspx" />
     <Content Include="Service1.svc" />
@@ -94,6 +96,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Autocomplete.aspx.cs">
+      <DependentUpon>Autocomplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Autocomplete.aspx.designer.cs">
+      <DependentUpon>Autocomplete.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.aspx.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -104,6 +113,13 @@
     <Compile Include="MovieResult.cs" />
     <Compile Include="ResultCollection.cs" />
     <Compile Include="Song.cs" />
+    <Compile Include="Songautocomplete.aspx.cs">
+      <DependentUpon>Songautocomplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Songautocomplete.aspx.designer.cs">
+      <DependentUpon>Songautocomplete.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Songcollection.cs" />
     <Compile Include="Song_Search.aspx.cs">
       <DependentUpon>Song_Search.aspx</DependentUpon>

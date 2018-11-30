@@ -14,7 +14,10 @@ namespace Final_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            {
 
+            }
         }
         protected void SubBtnClick(object sender, EventArgs e)
         {
