@@ -17,6 +17,7 @@ namespace Final_Project
 
             String term = Request.QueryString["term"];
 
+            FirstToUpper(term);
 
             // get the letters that the user typed 
 
@@ -50,6 +51,11 @@ namespace Final_Project
                             matchedinfosong.Add(resultObj.TrackName);
 
                         }
+                        else
+                        {
+                            
+                        }
+                        
                     }
 
                 }
@@ -61,6 +67,17 @@ namespace Final_Project
 
             Response.End();
         }
+
+        public static string FirstToUpper(string s)
+        {
+            if (string.IsNullOrEmpty(s))
+            {
+                return string.Empty;
+            }
+            // Return char and concat substring.  
+            return char.ToUpper(s[0]) + s.Substring(1);
+        }
+    
     }
 }
 

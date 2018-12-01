@@ -21,7 +21,24 @@ namespace Final_Project
         }
         protected void SubBtnClick(object sender, EventArgs e)
         {
-            Search_Movie();
+
+            string search_movie = null;
+            search_movie = Searchbox.Value;
+
+
+            if (search_movie != null && search_movie.Length > 0)
+            {
+
+                Search_Movie();
+            }
+            else
+            {
+                
+                    Movie_info.Text = "<p>No search results found for <strong>" + search_movie +
+                        "</strong>. This movie seems to be not so famous. Time to improve your taste perhaps <img src=\"images/smiley.jpg\" alt=\":P\" height=\"20\" width=\"20\" /> </p>";
+                
+            }
+            
         }
 
         public void Search_Movie()

@@ -26,6 +26,13 @@ namespace Final_Project
 
                 Search_songs();
             }
+            else            
+
+                {
+                    song_info.Text = "<p>No search results found for <strong>" + search_text +
+                        "</strong>. This song seems to be not so famous. Time to improve your taste perhaps <img src=\"images/smiley.jpg\" alt=\":P\" height=\"20\" width=\"20\" /> </p>";
+            }
+            
         }
 
         public void Search_songs()
