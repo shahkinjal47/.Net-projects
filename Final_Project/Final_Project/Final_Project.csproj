@@ -87,6 +87,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Autocomplete.aspx" />
+    <Content Include="images\Explore.gif" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\movies.jpg" />
+    <Content Include="images\Search.gif" />
     <Content Include="MainPage.aspx" />
     <Content Include="Songautocomplete.aspx" />
     <Content Include="songs_format.css" />
@@ -136,7 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

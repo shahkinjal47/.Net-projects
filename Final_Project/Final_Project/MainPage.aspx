@@ -20,37 +20,35 @@
   
   </script>
     <title>Movie Info</title>
+   
 </head>
 <body>
     <form id="form1" runat="server">
         <div id="topnav">
-            <table>
-                <tr>
-                    <td>
-                        <h1>Movie Database</h1>
-                        <strong>Go ahead and know more about your favourite movies!!</strong>
-                    </td>
-                    <td width="300">
-
-                    </td>
-                    <td style="float: right;">
-                        <img src="images/movies.jpg" alt="Movie image" height="98" width="380" />
-                    </td>
-                </tr>
-            </table>
+            <img src="images/logo.png" height="150" /><img src="images/movies.jpg" style="width: 1094px; height: 150px; margin-left: 112px; margin-bottom: 0px;" />
+            <br />
+            <img src="images/Animation_withcolor.gif" />              
+    
         </div>
-        <div id="content" class="form-group col-xs-4">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+       
+          <div id="content" class="form-group col-xs-4" style="background-color: #C0C0C0; font-family: serif; height: 169px; font-size: large;">
             <p>
                 <br />
-                &nbsp;Search Movie: <input id="Searchbox" class="form-control" type="text" placeholder="Example: Spider-Man" runat="server"/>
+                &nbsp;Search Movie: <input id="Searchbox" class="form-control" type="text" placeholder="Example: Spider-Man" runat="server" style="background-color: #CCFFFF; font-family: Algerian; font-size: medium"/>
                 <br />
-                <asp:Button class="btn btn-primary" ID="submit_button" runat="server" Text="Submit" OnClick="SubBtnClick" />
-                <a href="Song_Search.aspx" class="btn btn-primary">Go to Song Search Page</a>
-                <br /> <br />
+                <asp:Button class="btn btn-primary" ID="submit_button" runat="server" Text="Submit" OnClick="SubBtnClick" ForeColor="#CCFFFF" ToolTip="submit to search" />
+                &nbsp;<a href="Song_Search.aspx" class="btn btn-primary">Go to Song Search Page</a><br /> <br />
                 <asp:Label ID="Movie_info" runat="server" Text=""></asp:Label>                
              </p>
             <br />
         </div>
+        
     </form>
-</body>
+    </body>
 </html>

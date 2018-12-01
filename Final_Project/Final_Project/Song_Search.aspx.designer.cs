@@ -22,22 +22,13 @@ namespace Final_Project {
         protected global::System.Web.UI.HtmlControls.HtmlForm songs_id;
         
         /// <summary>
-        /// Songlabel control.
+        /// songdata control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Songlabel;
-        
-        /// <summary>
-        /// songtext control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox songtext;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText songdata;
         
         /// <summary>
         /// songbutton control.

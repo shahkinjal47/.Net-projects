@@ -1,59 +1,59 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Net;
-using System.IO;
 
 namespace Final_Project
 {
-    public partial class Autocomplete : System.Web.UI.Page
+    public partial class Songautocomplete : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             String term = Request.QueryString["term"];
 
-        
+
             // get the letters that the user typed 
 
             Response.Clear();
             // change the content type, so the browser knows it's JSON
             Response.ContentType = "application/json; charset=utf-8";
+
             using (var webClient = new WebClient())
             {
 
-                string search_text = term;           
-                string url = "https://api.themoviedb.org/3/search/movie?api_key=ca0f17e030221db0ccc79d1241d7d943&language=en-US&query=" + search_text + "&page=1&include_adult=false";
+                string search_text = term;
+                string url = "https://itunes.apple.com/search?term=" + search_text;
                 Uri uri = new Uri(@url);
                 WebRequest webRequest = WebRequest.Create(uri);
                 WebResponse response = webRequest.GetResponse();
                 StreamReader streamReader = new StreamReader(response.GetResponseStream());
                 String responseData = streamReader.ReadToEnd();
-                //String rawData =
-                //    webClient.DownloadString("https://gist.githubusercontent.com/jasonbaldridge/2668632/raw/e56320c485a33c339791a25cc107bf70e7f1d763/music.json");
 
-                ResultsCollection result_Collection = JsonConvert.DeserializeObject<ResultsCollection>(responseData);                
+                Songcollection resultCount = JsonConvert.DeserializeObject<Songcollection>(responseData);
 
-                List<String> matchedinfo = new List<String>();
+                List<String> matchedinfosong = new List<String>();
 
                 if (term != null && term.Length > 0)
                 {
 
-                    foreach (var resultObj in result_Collection.Results)
+                    foreach (var resultObj in resultCount.Results)
 
                     {
-                        if (resultObj.Title.Contains(term))
+                        if (resultObj.TrackName.Contains(term))
                         {
-                            matchedinfo.Add(resultObj.Title);
+                            matchedinfosong.Add(resultObj.TrackName);
 
                         }
                     }
 
                 }
-                string matchedJson = JsonConvert.SerializeObject(matchedinfo);
+                string matchedJson = JsonConvert.SerializeObject(matchedinfosong);
 
                 Response.Write(matchedJson);
 
@@ -63,5 +63,7 @@ namespace Final_Project
         }
     }
 }
+
+
 
 

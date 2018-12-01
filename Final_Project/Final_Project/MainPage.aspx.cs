@@ -47,7 +47,7 @@ namespace Final_Project
             }
             else
             {
-                int i = 1;   
+                int i = 1;
                 foreach (var resultObj in result_Collection.Results)
                 {
                     
@@ -55,6 +55,7 @@ namespace Final_Project
                         + " <br/>Release Date: </strong>" + resultObj.Release_Date + " <br/><strong>Overview: </strong>" + resultObj.Overview + "<br/><strong>Votes: </strong>" 
                         + resultObj.Vote_average + "<br/>";
                     i++;
+                    
                 }
                 
             }

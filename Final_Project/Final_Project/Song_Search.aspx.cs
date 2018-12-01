@@ -19,7 +19,7 @@ namespace Final_Project
         protected void songbutton_Click(object sender, EventArgs e)
         {
 
-            string search_text = songtext.Text;
+            string search_text = songdata.Value;
 
             if (search_text != null)
             {
@@ -31,7 +31,7 @@ namespace Final_Project
         public void Search_songs()
         {
             song_info.Text = "";
-            string search_text = songtext.Text;
+            string search_text = songdata.Value;
             string url = "https://itunes.apple.com/search?term=" + search_text;
             Uri uri = new Uri(@url);
             WebRequest webRequest = WebRequest.Create(uri);
@@ -54,14 +54,16 @@ namespace Final_Project
                 foreach (var data in resultCount.Results)
                 {
 
-                    song_info.Text += i + ". " + "<strong> song info: " + data.Kind
-                        + " <br/>ArtistId: </strong>" + "" + data.ArtistId +
-                        " <br/><strong>Artist Name: </strong>" + data.ArtistName + "<br/><strong>Collection Name</strong>"
-                        + data.CollectionName + "<br/>";
+                    song_info.Text += i + ". " + "<strong>Artist Name:</strong>" + data.ArtistName
+                         + "<br/><strong>Collection Name:</strong>" + "" + data.CollectionName +
+                         " <br/><strong>Track Name:</strong>" + data.TrackName + "<br/><strong>Primary Genre Name:</strong>"                    
+                         + data.PrimaryGenreName + "<br/><strong>Preview URL:</strong>" + data.PreviewUrl + "<br/>";
                     i++;
                 }
+               
 
             }
+
 
         }
     }
