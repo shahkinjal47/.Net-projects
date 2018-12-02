@@ -64,14 +64,14 @@ namespace Final_Project
                     song_info.Text += i + ". " + "<strong>Artist Name:</strong>" + data.ArtistName
                          + "<br/><strong>Collection Name:</strong>" + "" + data.CollectionName +
                          " <br/><strong>Track Name:</strong>" + data.TrackName + "<br/><strong>Primary Genre Name:</strong>"                    
-                         + data.PrimaryGenreName + "<br/><strong>Preview URL:</strong>" + data.PreviewUrl + "<br/>";
+                         + data.PrimaryGenreName + "<br/><strong>Preview URL:</strong> <a href=\""+ data.PreviewUrl+ "\">Click here for song Preview</a> <br/>";
                     i++;
                 }
                
 
             }
 
-
+      
         }
     }
 }

@@ -45,7 +45,9 @@ namespace Final_Project
                     foreach (var resultObj in result_Collection.Results)
 
                     {
-                        if (resultObj.Title.Contains(term))
+
+                        if (!string.IsNullOrEmpty(resultObj.Title) && resultObj.Title.ToUpper().Contains(term.ToUpper()))
+                            
                         {
                             matchedinfo.Add(resultObj.Title);
 

@@ -15,9 +15,7 @@ namespace Final_Project
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            String term = Request.QueryString["term"];
-
-            FirstToUpper(term);
+            String term = Request.QueryString["term"];            
 
             // get the letters that the user typed 
 
@@ -46,15 +44,13 @@ namespace Final_Project
                     foreach (var resultObj in resultCount.Results)
 
                     {
-                        if (resultObj.TrackName.Contains(term))
+
+
+                        if (!string.IsNullOrEmpty(resultObj.TrackName) && resultObj.TrackName.ToUpper().Contains(term.ToUpper()))
                         {
                             matchedinfosong.Add(resultObj.TrackName);
 
-                        }
-                        else
-                        {
-                            
-                        }
+                        }                       
                         
                     }
 
@@ -68,16 +64,7 @@ namespace Final_Project
             Response.End();
         }
 
-        public static string FirstToUpper(string s)
-        {
-            if (string.IsNullOrEmpty(s))
-            {
-                return string.Empty;
-            }
-            // Return char and concat substring.  
-            return char.ToUpper(s[0]) + s.Substring(1);
-        }
-    
+      
     }
 }
 
