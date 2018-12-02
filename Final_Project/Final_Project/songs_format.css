@@ -5,17 +5,17 @@
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
-    background-color: aliceblue;
+    background-color: #FF9000;
 }
 
 #topnav {
-    background-color: mediumslateblue;
+    background-color: #FF9000;
     margin-top: 0px;
     position: fixed;
     vertical-align: top;
     left: 0;
     top: 0;
-    height: 7em;
+    height: 3em;
     width: 100%;
     z-index: 100;
 }

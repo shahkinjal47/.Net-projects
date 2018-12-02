@@ -86,12 +86,14 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="about_us.html" />
     <Content Include="Autocomplete.aspx" />
     <Content Include="images\Explore.gif" />
     <Content Include="images\logo.png" />
     <Content Include="images\movies.jpg" />
     <Content Include="images\Search.gif" />
-    <Content Include="MainPage.aspx" />
+    <Content Include="index.html" />
+    <Content Include="Movie_search.aspx" />
     <Content Include="Songautocomplete.aspx" />
     <Content Include="songs_format.css" />
     <Content Include="Song_Search.aspx" />
@@ -107,14 +109,14 @@
     <Compile Include="Autocomplete.aspx.designer.cs">
       <DependentUpon>Autocomplete.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.aspx.cs">
-      <DependentUpon>MainPage.aspx</DependentUpon>
+    <Compile Include="MovieResult.cs" />
+    <Compile Include="Movie_search.aspx.cs">
+      <DependentUpon>Movie_search.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MainPage.aspx.designer.cs">
-      <DependentUpon>MainPage.aspx</DependentUpon>
+    <Compile Include="Movie_search.aspx.designer.cs">
+      <DependentUpon>Movie_search.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MovieResult.cs" />
     <Compile Include="ResultCollection.cs" />
     <Compile Include="Song.cs" />
     <Compile Include="Songautocomplete.aspx.cs">

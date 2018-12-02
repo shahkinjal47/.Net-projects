@@ -10,42 +10,42 @@
 namespace Final_Project {
     
     
-    public partial class sample {
+    public partial class MainPage {
         
         /// <summary>
-        /// songs_id control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm songs_id;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// song_info control.
+        /// Movie_info control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label song_info;
+        protected global::System.Web.UI.WebControls.Label Movie_info;
         
         /// <summary>
-        /// songdata control.
+        /// Searchbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText songdata;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Searchbox;
         
         /// <summary>
-        /// songbutton control.
+        /// submit_button control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button songbutton;
+        protected global::System.Web.UI.WebControls.Button submit_button;
     }
 }
