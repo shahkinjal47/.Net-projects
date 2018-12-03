@@ -92,7 +92,6 @@
     <Content Include="images\logo.png" />
     <Content Include="images\movies.jpg" />
     <Content Include="images\Search.gif" />
-    <Content Include="index.html" />
     <Content Include="Movie_search.aspx" />
     <Content Include="Songautocomplete.aspx" />
     <Content Include="songs_format.css" />

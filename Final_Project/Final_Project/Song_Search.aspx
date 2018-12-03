@@ -23,9 +23,8 @@
         });
     });
   
-   </script>
-   <link rel="stylesheet" href="styles.css" type="text/css" />
-      <title>Songs Collection</title>
+   </script> 
+   <title>Songs Collection</title>
 </head>
 <body>
  <div id="navtop">       
