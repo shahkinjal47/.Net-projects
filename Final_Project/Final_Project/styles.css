@@ -1,10 +1,10 @@
 ﻿body {
     background: url(images/download.jpg);
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: auto;
     z-index: -1;
     opacity: 1.0;
     filter: alpha(opacity=100);
@@ -41,7 +41,7 @@
     margin-left:5%;
     padding:2em;
     background-color:rgba(143,188,143,0.6);
-    width:100%;
+    width:80%;
 }
 
 #content {
@@ -51,7 +51,7 @@
     top: 73px;
     left: 2px;
     overflow-y:scroll;
-    overflow-x:scroll;
+   
 }
 
 #aboutus ul li {
@@ -77,8 +77,12 @@ em {
 h4  {
     color: black;
 }
-# Searchbox {
+#Searchbox {
+    background-color: #CCFFFF;    
+    font-size: medium;
+}
+
+#songdata {
     background-color: #CCFFFF;
-    font-family: Algerian;
-    font-size: medium";
+    font-size: medium;
 }

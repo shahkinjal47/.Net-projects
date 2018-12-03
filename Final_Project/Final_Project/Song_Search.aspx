@@ -43,7 +43,8 @@
             <br />
             <asp:Button class="btn btn-info" ID="songbutton" runat="server" Text="Submit" OnClick="songbutton_Click" ToolTip="submit to search" />
             &nbsp;<a href="Movie_search.aspx" class="btn btn-info">Go back to movie search</a><br />   
-            <div style="display:block">                
+            <div style="display:block"> 
+                <br />
                 <asp:Label ID="song_info" runat="server" ></asp:Label>  
             </div>
         </form>

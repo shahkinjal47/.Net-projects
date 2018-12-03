@@ -35,7 +35,7 @@
     <h2><strong>Look for your favourite movie here.</strong></h2> 
     <form id="form1" runat="server">       
         <div style="display:block">
-           <input id="Searchbox" class="form-control" type="text" placeholder="Example: Spider-Man" runat="server" />
+           <input id="Searchbox" class="col-md-6" type="text" placeholder="Example: Spider-Man" runat="server" />
            <asp:RequiredFieldValidator ID="RequiredFieldValidatorsearchmovie" runat="server" ErrorMessage="Enter any movie name to search" ControlToValidate="Searchbox" ForeColor="Red"></asp:RequiredFieldValidator>
         </div>
         <br /> 
@@ -44,8 +44,8 @@
              &nbsp;<a href="Song_Search.aspx" class="btn btn-info">Go to Song Search Page</a>
         </div>  
          <div style="display:block">
-          </br>
-          <asp:label ID="Movie_info" runat="server" Height="80%" Width="80%"></asp:label>           
+         </br>
+          <asp:label ID="Movie_info" runat="server"></asp:label>           
         </div>
     </form>
     </div>
