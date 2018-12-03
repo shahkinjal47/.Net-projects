@@ -15,9 +15,7 @@ namespace Final_Project
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            {
-
-            }
+          
         }
         protected void SubBtnClick(object sender, EventArgs e)
         {
@@ -25,17 +23,14 @@ namespace Final_Project
             string search_movie = null;
             search_movie = Searchbox.Value;
 
-
             if (search_movie != null && search_movie.Length > 0)
             {
-
                 Search_Movie();
             }
             else
-            {
-                
-                    Movie_info.Text = "<p>No search results found for <strong>" + search_movie +
-                        "</strong>. This movie seems to be not so famous. Time to improve your taste perhaps <img src=\"images/smiley.jpg\" alt=\":P\" height=\"20\" width=\"20\" /> </p>";
+            {                
+                  Movie_info.Text = "<p>No search results found for <strong>" + search_movie +
+                    "</strong>. This movie seems to be not so famous. Time to improve your taste perhaps <img src=\"images/smiley.jpg\" alt=\":P\" height=\"20\" width=\"20\" /> </p>";
                 
             }
             
@@ -45,14 +40,12 @@ namespace Final_Project
         {
             Movie_info.Text = "";
             string search_text = Searchbox.Value;
-            string url = "https://api.themoviedb.org/3/search/movie?api_key=ca0f17e030221db0ccc79d1241d7d943&language=en-US&query=" + search_text + "&page=1&include_adult=false";
-            //Uri uri = new Uri(@"https://api.themoviedb.org/3/search/movie?api_key=ca0f17e030221db0ccc79d1241d7d943&language=en-US&query=hangover&page=1&include_adult=false");
+            string url = "https://api.themoviedb.org/3/search/movie?api_key=ca0f17e030221db0ccc79d1241d7d943&language=en-US&query=" + search_text + "&page=1&include_adult=false";            
             Uri uri = new Uri(@url);
             WebRequest webRequest = WebRequest.Create(uri);
             WebResponse response = webRequest.GetResponse();
             StreamReader streamReader = new StreamReader(response.GetResponseStream());
-            String responseData = streamReader.ReadToEnd();
-            
+            String responseData = streamReader.ReadToEnd();            
 
             ResultsCollection result_Collection = JsonConvert.DeserializeObject<ResultsCollection>(responseData);
             int Result_count = result_Collection.Results.Count;
@@ -60,7 +53,7 @@ namespace Final_Project
             if(Result_count < 1)
             {
                 Movie_info.Text = "<p>No search results found for <strong>" + search_text +
-                    "</strong>. This movie seems to be not so famous. Time to improve your taste perhaps <img src=\"images/smiley.jpg\" alt=\":P\" height=\"20\" width=\"20\" /> </p>";
+                "</strong>. This movie seems to be not so famous. Time to improve your taste perhaps <img src=\"images/smiley.jpg\" alt=\":P\" height=\"20\" width=\"20\" /> </p>";
             }
             else
             {

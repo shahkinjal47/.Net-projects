@@ -14,13 +14,10 @@ namespace Final_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            String term = Request.QueryString["term"];
-
-        
-            // get the letters that the user typed 
-
+            String term = Request.QueryString["term"];    
+            
             Response.Clear();
-            // change the content type, so the browser knows it's JSON
+            
             Response.ContentType = "application/json; charset=utf-8";
             using (var webClient = new WebClient())
             {
@@ -32,9 +29,7 @@ namespace Final_Project
                 WebResponse response = webRequest.GetResponse();
                 StreamReader streamReader = new StreamReader(response.GetResponseStream());
                 String responseData = streamReader.ReadToEnd();
-                //String rawData =
-                //    webClient.DownloadString("https://gist.githubusercontent.com/jasonbaldridge/2668632/raw/e56320c485a33c339791a25cc107bf70e7f1d763/music.json");
-
+               
                 ResultsCollection result_Collection = JsonConvert.DeserializeObject<ResultsCollection>(responseData);                
 
                 List<String> matchedinfo = new List<String>();
