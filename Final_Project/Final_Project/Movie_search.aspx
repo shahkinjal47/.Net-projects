@@ -36,6 +36,7 @@
     <form id="form1" runat="server">       
         <div style="display:block">
            <input id="Searchbox" class="form-control" type="text" placeholder="Example: Spider-Man" runat="server" />
+           <asp:RequiredFieldValidator ID="RequiredFieldValidatorsearchmovie" runat="server" ErrorMessage="Enter any movie name to search" ControlToValidate="Searchbox" ForeColor="Red"></asp:RequiredFieldValidator>
         </div>
         <br /> 
         <div style="display:block">

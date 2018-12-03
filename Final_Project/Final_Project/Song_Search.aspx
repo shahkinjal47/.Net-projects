@@ -37,7 +37,8 @@
         <h2><strong>Look for your favourite song here.</strong> </h2>   
         <form id="songs_id" runat="server">            
             <div style="display:block">
-                <input id="songdata" class="col-md-6" type="text" placeholder="Example: Who says" runat="server"/>
+                <input id="songdata" class="col-md-6" type="text" placeholder="Example: Who says" runat="server" />
+                <asp:RequiredFieldValidator ID="RequiredFieldValidatorsearch" runat="server" ErrorMessage="Enter any song to search" ControlToValidate="songdata" ForeColor="Red"></asp:RequiredFieldValidator>
             </div>
             <br />
             <asp:Button class="btn btn-info" ID="songbutton" runat="server" Text="Submit" OnClick="songbutton_Click" ToolTip="submit to search" />

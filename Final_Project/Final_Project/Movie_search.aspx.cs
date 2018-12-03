@@ -14,24 +14,30 @@ namespace Final_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-          
+
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+
+
         }
         protected void SubBtnClick(object sender, EventArgs e)
         {
-
-            string search_movie = null;
-            search_movie = Searchbox.Value;
-
-            if (search_movie != null && search_movie.Length > 0)
+            if (Page.IsValid)
             {
-                Search_Movie();
-            }
-            else
-            {                
-                  Movie_info.Text = "<p>No search results found for <strong>" + search_movie +
-                    "</strong>. This movie seems to be not so famous. Time to improve your taste perhaps <img src=\"images/smiley.jpg\" alt=\":P\" height=\"20\" width=\"20\" /> </p>";
-                
+
+                string search_movie = null;
+                search_movie = Searchbox.Value;
+
+                if (search_movie != null && search_movie.Length > 0)
+                {
+                    Search_Movie();
+                }
+                else
+                {
+                    Movie_info.Text = "<p>No search results found for <strong>" + search_movie +
+                      "</strong>. This movie seems to be not so famous. Time to improve your taste perhaps <img src=\"images/smiley.jpg\" alt=\":P\" height=\"20\" width=\"20\" /> </p>";
+
+                }
+
             }
             
         }

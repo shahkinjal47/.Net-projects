@@ -31,6 +31,15 @@ namespace Final_Project {
         protected global::System.Web.UI.HtmlControls.HtmlInputText songdata;
         
         /// <summary>
+        /// RequiredFieldValidatorsearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorsearch;
+        
+        /// <summary>
         /// songbutton control.
         /// </summary>
         /// <remarks>

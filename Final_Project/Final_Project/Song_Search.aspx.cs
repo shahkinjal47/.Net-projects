@@ -14,23 +14,27 @@ namespace Final_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
         protected void songbutton_Click(object sender, EventArgs e)
         {
 
-            string search_text = songdata.Value;
-
-            if (search_text != null)
+            if (Page.IsValid)
             {
 
-                Search_songs();
-            }
-            else            
+                string search_text = songdata.Value;
 
-            {
+                if (search_text != null)
+                {
+
+                    Search_songs();
+                }
+                else
+
+                {
                     song_info.Text = "<p>No search results found for <strong>" + search_text +
                     "</strong>. This song seems to be not so famous. Time to improve your taste perhaps <img src=\"images/smiley.jpg\" alt=\":P\" height=\"20\" width=\"20\" /> </p>";
+                }
             }
             
          }
