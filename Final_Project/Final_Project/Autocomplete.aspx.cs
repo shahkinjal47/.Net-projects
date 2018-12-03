@@ -14,6 +14,8 @@ namespace Final_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //This funtion will be called when user types atleast two characters in the movie search box. 
+            //It will fetch and display all the movie titles containing the searched characters to give suggestions to users.
             String term = Request.QueryString["term"];    
             
             Response.Clear();
@@ -22,7 +24,7 @@ namespace Final_Project
             using (var webClient = new WebClient())
             {
 
-                string search_text = term;           
+                string search_text = term;         
                 string url = "https://api.themoviedb.org/3/search/movie?api_key=ca0f17e030221db0ccc79d1241d7d943&language=en-US&query=" + search_text + "&page=1&include_adult=false";
                 Uri uri = new Uri(@url);
                 WebRequest webRequest = WebRequest.Create(uri);

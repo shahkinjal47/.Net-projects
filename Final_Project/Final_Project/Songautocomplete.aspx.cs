@@ -14,6 +14,8 @@ namespace Final_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //This funtion will be called when user types atleast two characters in the song search box. 
+            //It will fetch and display all the songs containing the searched characters to give suggestions to users.
 
             String term = Request.QueryString["term"];            
 

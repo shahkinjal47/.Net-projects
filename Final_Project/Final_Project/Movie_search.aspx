@@ -16,6 +16,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
     <script>
+    <!-- Using below function to load Autocomplete.aspx page when user types in atleast two characters in the search box to show suggestions -->
     $( function(){
         $("#Searchbox").autocomplete({
            source: "Autocomplete.aspx",

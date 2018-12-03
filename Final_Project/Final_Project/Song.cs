@@ -5,8 +5,9 @@ using System.Web;
 
 namespace Final_Project
 {
-    public class Song { 
+    public class Song {
 
+        //Created this class to capture various attributes from the json response received on song search
         private string artistName;
         private string collectionName;
         private string trackName;

@@ -7,6 +7,7 @@ namespace Final_Project
 {
     public class Result
     {
+        //Created this class to capture various attributes from the json response received on movie search
         private string title;
         private string overview;
         private string vote_average;
