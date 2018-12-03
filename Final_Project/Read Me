@@ -1,0 +1,3 @@
+Created website to search movies and songs from all over the world using moviedb api for movie search and 
+the apple itunes api for the song search.
+We used programming language c# for developing the website. We used css along with bootstrap for styling.
