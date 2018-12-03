@@ -44,7 +44,8 @@
              &nbsp;<a href="Song_Search.aspx" class="btn btn-info">Go to Song Search Page</a>
         </div>  
          <div style="display:block">
-          <asp:label ID="Movie_info" runat="server" Text="Movie Search" Height="80%" Width="80%"></asp:label>           
+          </br>
+          <asp:label ID="Movie_info" runat="server" Height="80%" Width="80%"></asp:label>           
         </div>
     </form>
     </div>
